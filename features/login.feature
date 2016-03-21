@@ -7,7 +7,7 @@ Feature: log in to Rmrly
     Background: the user has signed up to use Rmrly
         
         Given I am a user with email "123@binghamton.edu" and password "pass"
-	    And I am is on the login page
+	    And I am on the login page
 
     Scenario: user sees the login prompt
   
