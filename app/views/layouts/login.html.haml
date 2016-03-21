@@ -1,6 +1,6 @@
-%h1 Sign Up
+%h1 Log in
 
-= form_tag user_path do
+= form_tag user_path do <!--:method => :put do? -->
 
     = label :user, :email, 'Email'
     = text_field :user, 'email'
@@ -8,4 +8,4 @@
     = label :user, :password, 'Password'
     = text_field :user, 'password'
     
-    = submit_tag 'Sign Up'
+    = submit_tag 'Log in' 

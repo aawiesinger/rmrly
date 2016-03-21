@@ -1,0 +1,11 @@
+%h1 Sign Up
+
+= form_tag user_path do <!--:method => :put do? -->
+
+    = label :user, :email, 'Email'
+    = text_field :user, 'email'
+    
+    = label :user, :password, 'Password'
+    = text_field :user, 'password'
+    
+    = submit_tag 'Sign Up'
