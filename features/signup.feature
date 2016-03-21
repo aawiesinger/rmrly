@@ -7,8 +7,7 @@ Feature: Signup to Rmrly
     Scenario: A new user signs up for Rmrly
         
         Given I am on the signup page
-        When I enter in my signup information
-        And I fill in "Email" with "example@binghamton.edu"
+        When I fill in "Email" with "example@binghamton.edu"
         And I fill in "Password" with "pass123"
         And I click "Sign Up"
         Then I should be on the homepage
