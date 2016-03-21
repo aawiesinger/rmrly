@@ -11,8 +11,8 @@ Feature: log in to Rmrly
 
     Scenario: user sees the login prompt
   
-        When I fill in "Password" with "pass"
-        And I fill in "Email" with "123@binghamton.edu"
+        When I fill in "Email" with "123@binghamton.edu"
+        And I fill in "Password" with "pass"
         And I press "Login"
         Then I should be on the homepage
 
