@@ -9,7 +9,7 @@ Feature: log in to Rmrly
         Given I am a user with email "123@binghamton.edu" and password "pass"
 	    And I am on the login page
 
-    Scenario: user sees the login prompt
+    Scenario: a returning user wants to log in
   
         When I fill in "Email" with "123@binghamton.edu"
         And I fill in "Password" with "pass"

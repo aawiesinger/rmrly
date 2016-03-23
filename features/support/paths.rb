@@ -10,9 +10,13 @@ module NavigationHelpers
     when /^the (Rmrly )?home\s?page$/
       users_path
     when /^the sign\s?up page$/
-      '/signup' #signup_path
+      signup_path
     when /^the log\s?in page$/
       login_path
+    when /^the create profile page$/
+      #path
+    when /^the profile page$/
+      #path
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
