@@ -60,3 +60,6 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
 end
+
+gem 'haml'
+
