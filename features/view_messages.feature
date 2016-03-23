@@ -1,7 +1,7 @@
-Feature: See messages exchanged by two users 
+Feature: See messages exchanged by two users in chronological order
   
   As a user who has matched with other users
-  I want to view messages I've sent to and received from other users
+  I want to view messages I've sent to and received from other users in chronological order
   So that I can have conversations with other users
   
 Background: You're logged in as "user1" and there are messages in the database
