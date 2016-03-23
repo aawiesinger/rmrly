@@ -10,7 +10,7 @@ module NavigationHelpers
     when /^the (Rmrly )?home\s?page$/
       users_path
     when /^the sign\s?up page$/
-      signup_path
+      '/signup' #signup_path
     when /^the log\s?in page$/
       login_path
       
