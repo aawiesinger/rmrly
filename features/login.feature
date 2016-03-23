@@ -14,7 +14,7 @@ Feature: log in to Rmrly
         When I fill in "Email" with "123@binghamton.edu"
         And I fill in "Password" with "pass"
         And I press "Login"
-        Then I should be on the homepage
+        Then I should be on the profile page
 
 
 	    

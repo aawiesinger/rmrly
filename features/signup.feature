@@ -10,5 +10,5 @@ Feature: Signup to Rmrly
         When I fill in "Email" with "example@binghamton.edu"
         And I fill in "Password" with "pass123"
         And I press "Sign Up"
-        Then I should be on the homepage
+        Then I should be on the create profile page
   
