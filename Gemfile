@@ -62,4 +62,4 @@ group :development, :test do
 end
 
 gem 'haml'
-
+gem "factory_girl_rails", "~> 4.0"
