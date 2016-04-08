@@ -10,11 +10,14 @@ module NavigationHelpers
     when /^the (Rmrly )?home\s?page$/
       users_path
     when /^the sign\s?up page$/
-      signup_path
-    when /^the log\s?in page$/
-      login_path
+      new_user_path
+    #when /^the log\s?in page$/
+      #login_path
+      #new_user_path
     when /^the create profile page$/
       #path
+      #luke testing
+      users_path
     when /^the profile page$/
       #path
       

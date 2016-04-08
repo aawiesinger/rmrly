@@ -1,6 +1,6 @@
 %h1 Sign Up
 
-= form_tag user_path do
+= form_tag users_path do
 
     = label :user, :email, 'Email'
     = text_field :user, 'email'
@@ -8,4 +8,5 @@
     = label :user, :password, 'Password'
     = text_field :user, 'password'
     
-    = submit_tag 'Sign Up'
+    -# not sure if :post is correct
+    = submit_tag 'Sign Up', :post => users_path
