@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:email, :password)
   end
   
-  def signup
+  def signup #using create for now
     # @user = User.create!(user_params)
     # flash[:notice] = "#{@user.email} was successfully created."
     #@user = User.new
@@ -22,7 +22,9 @@ class UsersController < ApplicationController
   end
   
   def login
-    
+    #fix routes in routes.rb
+    #get login info and find user in database then
+    #wherever
   end
 
   # GET /users
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+
   end
 
   # GET /users/1/edit

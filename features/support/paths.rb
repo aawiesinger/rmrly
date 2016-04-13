@@ -11,8 +11,8 @@ module NavigationHelpers
       users_path
     when /^the sign\s?up page$/
       new_user_path
-    #when /^the log\s?in page$/
-      #login_path
+    when /^the log\s?in page$/
+      users_login_path
       #new_user_path
     when /^the create profile page$/
       #path

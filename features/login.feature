@@ -6,13 +6,13 @@ Feature: log in to Rmrly
 
     Background: the user has signed up to use Rmrly
         
-        Given I am a user with email "123@binghamton.edu" and password "pass"
+        Given I am a user with email "email123@binghamton.edu" and password "password123"
 	    And I am on the login page
 
     Scenario: a returning user wants to log in
   
-        When I fill in "Email" with "123@binghamton.edu"
-        And I fill in "Password" with "pass"
+        When I fill in "Email" with "email123@binghamton.edu"
+        And I fill in "Password" with "password123"
         And I press "Login"
         Then I should be on the homepage
 
