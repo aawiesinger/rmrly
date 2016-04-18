@@ -8,4 +8,4 @@ Feature: Create user profile
       When I fill in "name" with "name"
       And I fill in "age" with "22"
       And I press "Submit"
-      Then I should be able to see my profile page
+      Then I should be on dashboard page

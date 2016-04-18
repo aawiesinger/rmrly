@@ -26,6 +26,11 @@ class UsersController < ApplicationController
     #get login info and find user in database then
     #wherever
   end
+  
+  def login_info
+    @user = User.find(params[:email])
+    
+  end
 
   # GET /users
   # GET /users.json
@@ -68,7 +73,28 @@ class UsersController < ApplicationController
     flash[:notice] = "#{@user} was successfully created."
     redirect_to users_path #change to page Josh is making 
   end
-
+  
+  #/user/id/create_profile
+  def create_profile
+    
+  end
+  
+  #/user/id/create_profile_post
+  
+  
+  def create_profile_post
+    # Using movie as an example
+    # @movie = Movie.find params[:id]
+    # @movie.update_attributes!(movie_params)
+    # flash[:notice] = "#{@movie.title} was successfully updated."
+    # redirect_to movie_path(@movie)
+    
+    @user = User.find params[:id]
+    @user.#not update_attributes but add new ones: name, age
+    
+    
+  end
+  
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

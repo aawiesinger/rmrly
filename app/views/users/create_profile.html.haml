@@ -1,0 +1,12 @@
+%h1 Create Profile
+
+= form_tag users_path do
+
+    = label :user, :name, 'Name'
+    = text_field :user, 'name'
+    
+    = label :user, :age, 'Age'
+    = text_field :user, 'age'
+    
+    -# not sure if :post is correct
+    = submit_tag 'Create Profile', :post => users_path
