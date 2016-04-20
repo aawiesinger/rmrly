@@ -90,7 +90,7 @@ class UsersController < ApplicationController
     # redirect_to movie_path(@movie)
     
     @user = User.find params[:id]
-    @user.#not update_attributes but add new ones: name, age
+    #@user.#not update_attributes but add new ones: name, age
     
     
   end
@@ -126,7 +126,7 @@ class UsersController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    # def user_params
-    #   params.require(:user).permit(:email, :password)
-    # end
+    def user_params
+      params.require(:user).permit(:email, :password)
+    end
 end
