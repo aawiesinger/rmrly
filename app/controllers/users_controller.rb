@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :test_field) # remove test_field
+                                   :password_confirmation)
     end
     
     def logged_in_user 
