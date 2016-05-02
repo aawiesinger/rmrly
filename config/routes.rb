@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/chat/:user1/:user2' => 'messages#chat', as: :chat
   
-  get '/dashboard/:logged_in_user' => 'users#dashboard', as: :dashboard
+  get '/dashboard/:logged_in_user' => 'users#view_matches', as: :view_matches
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

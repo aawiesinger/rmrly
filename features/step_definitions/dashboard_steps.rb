@@ -1,6 +1,6 @@
 Given /the user with username "(.+)" and matches "(.+)" exists/ do |username, matches|
     m = matches.split(", ")
-  User.create(username: username, matches: m)
+  User.create(name: username, matches: m)
 end
 
 Then /^I should see the welcome message for "(.+)"$/ do |user|

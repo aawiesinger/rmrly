@@ -7,7 +7,7 @@ Given /the following messages exist/ do |messages_table|
 end
 
 Given /the user with the username "(.*)" exists/ do |user|
-    User.create(username: user)
+    User.create(name: user)
 end
 
 Then /^I should see "(.*)" before "(.*)"$/ do |e1, e2|

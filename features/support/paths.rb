@@ -3,10 +3,10 @@ module NavigationHelpers
     case page_name
       
     when /^the conversation page between "([^"]*)" and "([^"]*)"/
-        chat_path(user1: User.find_by_username($1), user2: User.find_by_username($2))
+        chat_path(user1: User.find_by_name($1), user2: User.find_by_name($2))
         
     when /^the dashboard page logged in as "([^"]*)"$/
-      dashboard_path(logged_in_user: User.find_by_username($1))
+      view_matches_path(logged_in_user: User.find_by_name($1))
 
     else
       begin
