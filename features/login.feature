@@ -1,20 +1,20 @@
 Feature: log in to Rmrly
 
-    As a user
+    As a user with an account
 	I want to see a login page for Rmrly
     So that I can login with my credentials and use the app
 
     Background: the user has signed up to use Rmrly
         
-        Given the user knows his/her login credentials
-	    And the user is on the Rmrly login screen
+        Given I am a user with email "123@binghamton.edu" and password "pass"
+	    And I am on the login page
 
     Scenario: user sees the login prompt
   
-        When I enter my login ID
-        When I enter my Password
-        When I press "Login"
-        Then I should see the Rmrly homepage
+        When I fill in "Email" with "123@binghamton.edu"
+        And I fill in "Password" with "pass"
+        And I press "Login"
+        Then I should be on the homepage
 
 
 	    
