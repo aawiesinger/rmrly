@@ -19,6 +19,12 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+      
+    when /^the conversation page between "([^"]*)" and "([^"]*)"/
+        chat_path(user1: User.find_by_name($1), user2: User.find_by_name($2))
+        
+    when /^the dashboard page logged in as "([^"]*)"$/
+      view_matches_path(logged_in_user: User.find_by_name($1))
 
     else
       begin

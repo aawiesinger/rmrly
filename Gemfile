@@ -66,3 +66,5 @@ end
 group :test do
   gem 'minitest-reporters'
 end
+gem 'haml'
+gem "factory_girl_rails", "~> 4.0"
