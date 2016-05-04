@@ -2,12 +2,12 @@
 #  visit path_to(page_name)
 #end
 
-Given /^I am on "([^"]*)"$/ do |path|
-  visit path
+Given /^I am on (.+)$/ do |path|
+  visit path_to(path)
 end
 
-Given /^(?:|I )am a user with email "([^"]*)" and password "([^"]*)"$/ do |email, password|
-  #create account with email, password
+Given /^A user exists with email "([^"]*)" and password "([^"]*)" and name "([^"]*)"$/ do |email, password, name|
+  User.create!(email: email, password: password, name:name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|

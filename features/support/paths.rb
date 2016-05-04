@@ -7,8 +7,8 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-    when /^the (Rmrly )?home\s?page$/
-      users_path
+    when /^the home\s?page for the user with the name "([^"]*)"$/
+      user_path(User.find_by_name($1))
     when /^the sign\s?up page$/
       '/signup' #signup_path
     when /^the log\s?in page$/

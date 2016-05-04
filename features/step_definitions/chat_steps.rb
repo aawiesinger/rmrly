@@ -1,7 +1,3 @@
-When /^(?:|I )go to (.+)$/ do |page_name|
-  visit path_to(page_name)
-end
-
 Given /the following messages exist/ do |messages_table|
   Message.create(messages_table.hashes)
 end
