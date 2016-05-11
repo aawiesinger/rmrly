@@ -1,0 +1,12 @@
+%table#matches
+  %thead
+    %tr
+      %th Name
+      %th Profile
+      %th Chat
+  %tbody
+    - @matches.each do |user|
+      %tr
+        %td= user.name
+        %td= link_to "View Profile"
+        %td= link_to "Chat"

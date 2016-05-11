@@ -11,15 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419223510) do
+ActiveRecord::Schema.define(version: 20160502203554) do
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "to_user"
+    t.string   "from_user"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
     t.string   "email"
+    t.string   "password"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.string   "name"
+    t.string   "matches"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,14 @@
+fake_user1:
+    id: 1
+    username: user1
+    matches: ['user2', 'user3']
+    
+fake_user2:
+    id: 2
+    username: user2
+    matches: ['user1']
+    
+fake_user3:
+    id: 3
+    username: user3
+    matches: ['user1']

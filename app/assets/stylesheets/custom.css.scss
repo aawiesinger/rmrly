@@ -198,3 +198,20 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+table#matches {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+table#matches th {
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+table#matches th, table#matches td {
+  padding: 4px;
+  text-align: left;
+  color: black;
+}
+tr:nth-child(even) {background-color: #dedede}
+tr:nth-child(odd)  {background-color: #fefefe}
