@@ -14,8 +14,8 @@ Background: You're logged in as "user1" and there are messages in the database
     | user2     | user1     | sure      |
     | user2     | user1     | lets do it|
     
-    And the user with the username "user1" exists
-    And the user with the username "user2" exists
+  And A user exists with email "123@binghamton.edu" and password "pass1234" and name "user1"    
+  Given A user exists with email "12jhvdhsxkj3@binghamton.edu" and password "pass1234" and name "user2"
     
 Scenario: I should see the messages in chronological order
   When I go to the conversation page between "user1" and "user2"

@@ -213,5 +213,5 @@ table#matches th, table#matches td {
   text-align: left;
   color: black;
 }
-tr:nth-child(even) {background-color: #dedede}
-tr:nth-child(odd)  {background-color: #fefefe}
+table#matches tr:nth-child(even) {background-color: #dedede}
+table#matches tr:nth-child(odd)  {background-color: #fefefe}

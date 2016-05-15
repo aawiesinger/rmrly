@@ -1,2 +1,17 @@
--@messages.each do |message|
-    .content= message.body
+%h1 Chat with #{@other_user.name}!
+
+%table#messages
+    %tbody
+        - @messages.each do |message|
+            %tr
+                - @this_message = message
+                - if @incoming_messages.include? message
+                    %td= render 'incoming_message'
+                - if @outgoing_messages.include? message
+                    %td= render 'outgoing_message'
+
+= form_tag send_message_path(@this_user, @other_user) do
+
+    = text_area :message, 'body'
+
+    = submit_tag "Send"
