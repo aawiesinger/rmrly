@@ -4,7 +4,7 @@ module NavigationHelpers
   #   When /^I go to (.+)$/ do |page_name|
   #
   # step definition in web_steps.rb
-  #
+  
   def path_to(page_name)
     case page_name
     when /^the home\s?page for the user with the name "([^"]*)"$/
@@ -13,7 +13,22 @@ module NavigationHelpers
       '/signup' #signup_path
     when /^the log\s?in page$/
       login_path
+    when /^the home\s?page$/
+      root_path
+    when /^the help\s?page$/
+      help_path
+    when /^the about\s?page$/
+      about_path
+    when /^the contact\s?page$/
+      contact_path
+    when /^the survey\s?page for the user with the name "([^"]*)"$/
+      survey_path(user1: User.find_by_name($1))
       
+    when /^the edit page for the user with the name "([^"]*)"$/
+      edit_user_path(User.find_by_name($1))
+      
+    when /^the matches page for the user with the name "([^"]*)"$/
+      view_matches_path(User.find_by_name($1))
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

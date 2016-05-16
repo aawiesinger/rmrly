@@ -8,5 +8,5 @@
     - @matches.each do |user|
       %tr
         %td= user.name
-        %td= link_to "View Profile"
+        %td= link_to "View Profile", user_path(user)
         %td= link_to "Chat"

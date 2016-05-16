@@ -6,13 +6,15 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <h2>
-        Age[22], Major[Computer Science], Year[Senior]
-      </h2>
-      <h3> Preferences </h3>
-        <h4>
-          [Smoker/Non-Smoker]<br>[Sleep Schedule]<br>[Party?]<br>[This]<br>[User]
-        </h4>
+      <h4>          
+        <br/> I like to go to bed <%= @user.go_to_bed %> <br/>
+        I enjoy waking up <%= @user.wake_up %> <br/>
+        I <% if @user.smoke %> smoke <% else %> don't smoke <% end %> <br/>
+        I <% if @user.drink %> drink <% else %> don't drink <% end %> <br/>
+        I <% if @user.party %> party <% else %> don't party <% end %> <br/>
+        I <% if @user.loud_music %> listen to loud music <% else %> use headphones <% end %> <br/>
+        I'm really <%= @user.messy_or_clean %> <br/>
+      </h4>
     </section>
   </aside>
 </div>

@@ -1,5 +1,7 @@
 %h1 Welcome to Rmrly, #{@logged_in_user.name}!
 
+= button_to 'Generate matches!', generate_matches_path(User.find_by_name(@logged_in_user.name))
+
 - if !@matches.empty?
   = render 'matches_table'
 
