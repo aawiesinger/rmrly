@@ -68,3 +68,6 @@ group :test do
 end
 gem 'haml'
 gem "factory_girl_rails", "~> 4.0"
+gem "faye-websocket"
+gem "puma"
+gem "json"
