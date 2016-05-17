@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   get '/chat/:user1/:user2' => 'messages#chat', as: :chat
+
   post '/send/:user1/:user2' => 'messages#send_message', as: :send_message
   
   get '/matches/:logged_in_user' => 'users#view_matches', as: :view_matches

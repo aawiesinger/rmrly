@@ -1,3 +1,5 @@
-%h1= @this_message.from_user
-
-%p1= @this_message.body
+%username= @this_message.from_user
+%br
+%body= @this_message.body
+%br
+%time= @this_message.created_at.to_formatted_s(:short)
