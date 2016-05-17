@@ -1,0 +1,7 @@
+%h1 Here are all the other users you've matched with, #{@logged_in_user.name}:
+
+- if !@matches.empty?
+  = render 'matches_table'
+
+- else
+  %p1 Looks like you don't have any matches yet :( Try generating some!

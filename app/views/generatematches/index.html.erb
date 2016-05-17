@@ -9,40 +9,54 @@
     <meta name="author" content="">
     <!--< link rel="icon" href="../../favicon.ico"> -->
 
-    <title>Rmr.ly - Log in</title>
+    <title>Rmr.ly - Generate Matches</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
+    <link href="css/overall.css" rel="stylesheet">
     <link href="css/signin.css" rel="stylesheet">
+    <style>
+    html, body, .center-container {
+    height: 100%;
+}
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
   </head>
 
   <body>
 
     <div class="container">
-
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Log in</h2>
-        <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Email or password incorrect.</div>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail-login" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword-login" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <div><p>Not a member? <a href="signup.html">Sign up</a></p></div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-      </form>
-
+        <h2 class="form-signin-heading">Rmrly - Generate Matches</h2>
     </div> <!-- /container -->
-
+    <div class="container">
+      <p>
+        <b>Roommate searching?</b>
+        <br>
+        Click below to let Rmrly generate your optimal roommate matches
+      </p>
+    </div>
+    
+    <div class="center-container btn ">
+      <button id="gen-btn" onclick="generate()">Generate Your Matches</button>
+      <div id="spinner" style="display:none">
+        <p>We're calculating your matches in the background.</p>
+      <img  src="https://www.wpfaster.org/wp-content/uploads/2013/06/circle-loading-gif.gif"></img>
+      </div>
+    </div>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+      function generate() {
+        document.getElementById("gen-btn").style.display = "none";
+        document.getElementById("spinner").style.display = "block";
+      }
+    </script>
   </body>
 </html>
-

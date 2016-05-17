@@ -1,9 +1,13 @@
-Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+#Given /^(?:|I )am on (.+)$/ do |page_name|
+#  visit path_to(page_name)
+#end
+
+Given /^I am on (.+)$/ do |path|
+  visit path_to(path)
 end
 
-Given /^(?:|I )am a user with email "([^"]*)" and password "([^"]*)"$/ do |email, password|
-  #create account with email, password
+Given /^A user exists with email "([^"]*)" and password "([^"]*)" and name "([^"]*)"$/ do |email, password, name|
+  User.create!(email: email, password: password, name:name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -29,4 +33,16 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   else
     assert_equal path_to(page_name), current_path
   end
+end
+
+#Then /^Ishould see "([^"]*)" in the selector "([^"]*)"$/ do |text, selector|
+#  page.should have_selector selector, content: text
+#end
+# 
+#Then /^I should see "([^"]*)" in a link$/ do |text|
+#  page.should have_link text
+#end
+
+Then /^I should see "([^"]*)"$/ do |text|
+  page.should have_content text
 end
