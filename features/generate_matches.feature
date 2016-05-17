@@ -4,18 +4,24 @@ Feature: Generate roommate matches
     So that I can see people that I am compatible with
   
     Background: The user has signed up to Rmrly
+      Given A user exists with email "123@binghamton.edu" and password "pass1234" and name "user1"
+      And the user with the name "user1" likes to go to bed "early"
+      And the user with the name "user1" likes to wake up "early"
+      And the user with the name "user1" likes to smoke
+      And the user with the name "user1" likes to drink
+      And the user with the name "user1" likes to party
+      And the user with the name "user1" likes to listen to loud music
+      And the user with the name "user1" is "clean"
+      And A user exists with email "234@binghamton.edu" and password "pass1234" and name "user2"
+      And the user with the name "user2" likes to go to bed "early"
+      And the user with the name "user2" likes to wake up "early"
+      And the user with the name "user2" likes to smoke
+      And the user with the name "user2" likes to drink
+      And the user with the name "user2" likes to party
+      And the user with the name "user2" likes to listen to loud music
+      And the user with the name "user2" is "clean"
   
     Scenario: A new user generates matches and has matches
-      Given I am on the matches page for the user with the name "user4"
+      Given I am on the matches page for the user with the name "user1"
       When I press "Generate matches!"
-      Then I should be on the matches page for the user with the name "user4"
-      Then I should see "user5"
-      And I should not see "user6"
-      And I should not see "user4"
-          
-    Scenario: A new user generates matches and does not have any matches
-      Given I am on the matches page for the user with the name "user6" 
-      When I press "Generate matches!"
-      Then I should see "Looks like you don't have any matches yet :( Try generating some!"
-      And I should not see "user4"
-      And I should not see "user5"
+      Then I should see "user2"

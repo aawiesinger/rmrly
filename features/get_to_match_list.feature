@@ -19,12 +19,7 @@ Scenario: I log in as a user who already has some matches
   And I should see "user2" before "user3"
   
 Scenario: I just created an account so I have no matches
-    Given I am on the signup page
-    When I fill in "Email" with "example@binghamton.edu"
-    And I fill in "Password" with "pass123"
-    And I fill in "Name" with "user4"
-    And I fill in "Confirmation" with "pass123"
-    And I press "Create my account"
+    Given I am on the homepage for the user with the name "user4"
     And I follow "Matches"
     Then I should be on the dashboard page logged in as "user4"
     And I should see "Looks like you don't have any matches yet :( Try generating some!"
