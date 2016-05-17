@@ -8,6 +8,6 @@ Feature: View help page for Rmrly
         Given I am on the homepage
         When I follow Help
         Then I should be on the help page
-        And I should see "Looking for help?"
+        And I should see "FAQ: How do I set up an account? "
         
         

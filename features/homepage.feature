@@ -6,5 +6,5 @@ Feature: View homepage for Rmrly
   Scenario: A user visits the homepage
     Given I am on the homepage
     Then I should see "Sign up"
-    And I should see "rmrly is an app that matches students looking for a place to live with other students based on survey questions"
+    And I should see "rmrly Home Help About Log in Welcome to rmrly Welcome to rmrly!"
     
