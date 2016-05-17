@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get '/signup' => 'users#signup'
   get '/login' => 'users#login'
+  #get '/survey' => 'users#survey'
   
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -30,7 +31,11 @@ Rails.application.routes.draw do
 
   post '/send/:user1/:user2' => 'messages#send_message', as: :send_message
   
+  get '/users/:user1/survey' => 'users#survey', as: :survey
+  post '/users/:user1/send_survey' => 'users#send_survey', as: :send_survey
+  
   get '/matches/:logged_in_user' => 'users#view_matches', as: :view_matches
+  post '/matches/:logged_in_user' => 'users#generate_matches', as: :generate_matches
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :users

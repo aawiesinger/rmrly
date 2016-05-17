@@ -1,4 +1,7 @@
-%h1 Here are all the other users you've matched with, #{@logged_in_user.name}:
+%h1 Matches
+%h4 Here are all the other users you've matched with, #{@logged_in_user.name}:
+
+= button_to 'Generate matches!', generate_matches_path(User.find_by_name(@logged_in_user.name))
 
 - if !@matches.empty?
   = render 'matches_table'

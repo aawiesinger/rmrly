@@ -9,6 +9,11 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  color:white !important;
+  color:#fff;
   opacity:0.95;
 }
+
+#tab{
+  margin-left: 10%;
+}
+

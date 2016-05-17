@@ -1,13 +1,25 @@
 <div class="center jumbotron">
   <h1>Welcome to rmrly</h1>
 
+    <% if curr_user %>
   <h2>
-    This is the home page for the
-    rmrly application.
+    Welcome back to rmrly!
+    <br>
+    Check out your matches to chat with potential roommates!
+    <br>
   </h2>
+    
+    <%else%>
+    <h2>
+    Welcome to rmrly!
+    <br>
+   rmrly is a roommate matching service. Click below to get started!
+    <br>
+      </h2>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+   <% end %>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/'%>
+<!-- <%= link_to image_tag("rails.png", alt: "Rails logo"),
+            'http://rubyonrails.org/'%> -->
