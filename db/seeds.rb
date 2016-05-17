@@ -19,6 +19,16 @@ users = [{name: "user1", matches: ["user2", "user3"], email: "abc@binghamton.edu
                 go_to_bed: "late", wake_up: "early", smoke: false, drink: false, party: false, 
                 loud_music: true, messy_or_clean: "clean"}
         ]
+        
+messages = [{to_user: "user1", from_user: "user2", body: "hey hi hello whats up"},
+           {to_user: "user2", from_user: "user1", body: "hey lets be roommates!!!!"},
+           {to_user: "user1", from_user: "user2", body: "Okay cool great awesome"},
+           {to_user: "user2", from_user: "user1", body: "yeah alright lets do it"}]
+        
+        
 
 User.destroy_all
 users.each {|user| User.create!(user)}
+
+Message.destroy_all
+messages.each{|message| Message.create!(message)}

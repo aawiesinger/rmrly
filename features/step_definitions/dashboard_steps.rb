@@ -8,5 +8,5 @@ Then /^I should see the welcome message for "(.+)"$/ do |user|
 end
 
 Then /I should see ([\d]+) user profile(?:s)?/ do |num|
-  expect(page).to have_selector("table tr", count: (num.to_i))
+  expect(page).to have_selector("table tr", count: (num.to_i + 1))
 end

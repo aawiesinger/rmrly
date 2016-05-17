@@ -2,15 +2,17 @@
   <h1>Welcome to rmrly</h1>
 
   <h2>
-    This is the home page for the
-    rmrly application.
-    
+    Welcome to rmrly! 
+    <br>
+    rmrly is a roommate finding service. Click sign-up below to get started.
+    <br>
   </h2>
-  <h3>
-    rmrly is an app that matches students looking for a place to live with other students based on survey questions
-  </h3>
   
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+   <% if curr_user %>
+    
+    <%else%>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+   <% end %>
 
 </div>
 

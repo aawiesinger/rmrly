@@ -7,4 +7,8 @@ module ApplicationHelper
             "#{base_title} | #{page_title}"
         end
     end
-end
+    
+    def curr_user
+        @curr_user ||= User.find(session[:user_id]) if session[:user_id]
+    end   
+ end
