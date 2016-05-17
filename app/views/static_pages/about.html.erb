@@ -2,6 +2,7 @@
 <div class="center jumbotron">
   <h1>About</h1>
 
+  <% if curr_user %>
   <h3>
       rmrly: <i>room-really</i>      
   </h3>
@@ -11,5 +12,15 @@
     rmrly is a roommate matching app for students at Binghamton University.
   </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+   <%else%>
+   <h3>
+      rmrly: <i>room-really</i>      
+  </h3>
+
+  <h2>
+    Are you looking for a roommate? Stop googling, and let rmrly do the work!
+    rmrly is a roommate matching app for students at Binghamton University.
+  </h2>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+   <% end %>
 </div>
