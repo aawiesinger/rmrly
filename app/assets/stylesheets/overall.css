@@ -20,3 +20,18 @@ body {
 #help{
   color: #fff;
 }
+
+username{
+  font-size: 1.5em;
+  font-weight:bold;
+}
+#incoming{
+  color:#fff;
+  background-color:#56BADB;
+}
+
+#outgoing{
+  color:black;
+  background-color:#AEDBEB;
+  //padding-left: 50%;
+}
