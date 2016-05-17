@@ -7,7 +7,7 @@ Given /^I am on (.+)$/ do |path|
 end
 
 Given /^A user exists with email "([^"]*)" and password "([^"]*)" and name "([^"]*)"$/ do |email, password, name|
-  User.create!(email: email, password: password, name:name)
+  User.create(email: email, password: password, name:name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
