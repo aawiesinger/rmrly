@@ -32,10 +32,9 @@ Feature: Generate roommate matches
     Scenario: A new user generates matches and has matches
       Given I am on the matches page for the user with the name "testuser1"
       When I press "Generate matches!"
-      Then I should be on the matches page for the user with the name "testuser1"
       Then I should see "testuser2"
+      And I should not see "testuser13"
       And I should not see "testuser3"
-      And I should not see "testuser1"
           
     Scenario: A new user generates matches and does not have any matches
       Given I am on the matches page for the user with the name "testuser3" 
