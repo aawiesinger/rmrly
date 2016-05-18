@@ -45,10 +45,13 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "GET #show" do
-    it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :show, {:id => user.to_param}, valid_session
-      expect(assigns(:user)).to eq(user)
+    before :each do
+      @fake_id = "1"
+      @fake_user = double("fake_user", :name => "Fake User", :id => @fake_id)
+    end
+    it "determines which user to show" do
+      expect(User).to receive(:find).with(@fake_id).and_return(@fake_user)
+      get :show, :id => @fake_id
     end
   end
 
@@ -60,10 +63,13 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "GET #edit" do
-    it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
-      get :edit, {:id => user.to_param}, valid_session
-      expect(assigns(:user)).to eq(user)
+    before :each do
+      @fake_id = "1"
+      @fake_user = double("fake_user", :name => "Fake User", :id => @fake_id)
+    end
+    it "determines which user to edit" do
+      expect(User).to receive(:find).with(@fake_id).and_return(@fake_user)
+      get :show, :id => @fake_id
     end
   end
 
@@ -178,8 +184,10 @@ RSpec.describe UsersController, type: :controller do
     end
    
     it 'should :generate_matches for the logged_in_user' do
-          get :generate_matches, logged_in_user: @id1
-          expect(assigns(:matches)).to contain_exactly(@user2, @user4)
+          post :generate_matches, logged_in_user: @id1
+          @user1.reload
+          expect(@user1.matches).to contain_exactly(@user2.name, @user4.name)
+          #post :generate_matches, logged_in_user: @id1
       end
     
   end
@@ -236,4 +244,18 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe "#send_survey" do
+    before :each do
+      @id1 = 33
+      @name1 = "abc1"
+      @email1 = 'abc1@gmail.com'
+      @user1 = double(:user, name: @name1, id: @id1, email: @email1)
+    end
+    it "updates user info" do
+      #fill_in 'go_to_bed', :with => 'early'
+      post :send_survey, user: @user1
+      expect(@user1.go_to_bed).to eq("early")
+    end
+  end
+  
 end

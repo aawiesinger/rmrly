@@ -69,33 +69,33 @@ class UsersController < ApplicationController
   def send_survey
     @user = User.find(params[:user1])
     
-    missing_fields = ""
-    if(params[:go_to_bed].empty?)
-      missing_fields += "Enter an answer for Do you go to bed early, or late?\n"
-    end
-    if (params[:wake_up].empty?)
-      missing_fields += "Enter an answer for Do you wake up early, or late?\n"
-    end
-    if(params[:smoke].empty?)
-      missing_fields += "Select an answer for Do you smoke?\n"
-    end
-    if(params[:drink].empty?)
-      missing_fields += "Select an answer for Do you drink?\n"
-    end    
-    if(params[:party].empty?)
-      missing_fields += "Select an answer for Do you party?\n"
-    end
-    if(params[:loud_music].empty?)
-      missing_fields += "Select an answer for Do you listen to loud music?\n"
-    end
-    if(params[:messy_or_clean].empty?)
-      missing_fields += "Enter an answer for Are you messy or clean?\n"
-    end    
+    # missing_fields = ""
+    # if(params[:go_to_bed].empty?)
+    #   missing_fields += "Enter an answer for Do you go to bed early, or late?\n"
+    # end
+    # if (params[:wake_up].empty?)
+    #   missing_fields += "Enter an answer for Do you wake up early, or late?\n"
+    # end
+    # if(params[:smoke].empty?)
+    #   missing_fields += "Select an answer for Do you smoke?\n"
+    # end
+    # if(params[:drink].empty?)
+    #   missing_fields += "Select an answer for Do you drink?\n"
+    # end    
+    # if(params[:party].empty?)
+    #   missing_fields += "Select an answer for Do you party?\n"
+    # end
+    # if(params[:loud_music].empty?)
+    #   missing_fields += "Select an answer for Do you listen to loud music?\n"
+    # end
+    # if(params[:messy_or_clean].empty?)
+    #   missing_fields += "Enter an answer for Are you messy or clean?\n"
+    # end    
     
-    if missing_fields != ""
-      flash[:notice] = missing_fields
-      redirect_to survey_path(@user)
-    else
+    # if missing_fields != ""
+    #   flash[:notice] = missing_fields
+    #   redirect_to survey_path(@user)
+    # else
       @user.go_to_bed = params[:go_to_bed]
       @user.wake_up = params[:wake_up]
       @user.smoke = params[:smoke]
@@ -103,7 +103,7 @@ class UsersController < ApplicationController
       @user.party = params[:party]
       @user.loud_music = params[:loud_music]
       @user.messy_or_clean = params[:messy_or_clean]
-    end
+    #end
       
       if @user.save
         # Handle a successful save.
