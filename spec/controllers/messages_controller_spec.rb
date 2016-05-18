@@ -18,6 +18,7 @@ describe MessagesController, type: :controller do
        @user3 = FactoryGirl.create(:user, email: @email3, name: @user_name_3, id: @user_id_3)
        @message_body_1 = "hello there"
        @message_body_2 = "hey hi hello"
+       @message_body_3 = "hello world"
        @message1 = FactoryGirl.create(:message, to_user: @user_name_1, from_user: @user_name_2, body: @message_body_1)
        @message2 = FactoryGirl.create(:message, to_user: @user_name_2, from_user: @user_name_1, body: @message_body_2)
     end
@@ -42,6 +43,17 @@ describe MessagesController, type: :controller do
         it "should render the chat template" do
             get :chat, user1: @user_id_1, user2: @user_id_2
             expect(response).to render_template("chat")
+        end
+    end
+    describe '#send_message' do
+        it "should create a new message" do
+            new_message = FactoryGirl.create(:message, to_user: @user_name_1, from_user: @user_name_2, body: @message_body_3)
+            expect(Message).to receive(:create!){new_message}
+            post :send_message, user1: @user_id_1, user2: @user_id_2, message: {body: @message_body_3}
+        end
+        it 'should redirect to #chat' do
+            post :send_message, user1: @user_id_1, user2: @user_id_2, message: {body: @message_body_3}
+            expect(response).to redirect_to(chat_path(@user_id_1, @user_id_2))
         end
     end
 end
