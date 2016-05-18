@@ -1,6 +1,6 @@
 ## Rmrly
 
-A service to help college students find roommates. Create an account to and fill out a short survey to get started. The answers from the survey will be used to find compatible matches.
+A service to help college students find roommates. Create an account and fill out a short survey to get started. The answers from the survey will be used to find compatible matches.
 
 Built for CS445 Software Engineering at Binghamton University
 
@@ -15,7 +15,7 @@ Team Members:
 
 ## Contribute
 
-If you'd like to begin developing rmrly, here is how to begin:
+If you'd like to begin developing Rmrly, follow these steps:
 
 0. clone the Rmrly repository from GitHub
 0. `bundle install`
