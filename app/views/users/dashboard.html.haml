@@ -1,9 +1,0 @@
-%h1 Welcome to Rmrly, #{@logged_in_user.username}!
-
-%table#matches
-  %tbody
-    - @matches.each do |user|
-      %tr
-        %td= user.username
-        %td= link_to "View Profile"
-        %td= link_to "Chat"
