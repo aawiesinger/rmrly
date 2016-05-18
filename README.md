@@ -13,12 +13,12 @@ Team Members:
 * Luke Watson
 * Toren DeRosa
 
+## Contribute
 
 If you'd like to begin developing rmrly, here is how to begin:
-1. clone the rmrly repository from github
-2. bundle install
-3. bundle exec rake db:migrate
-4. bundle exec rake db:migrate:status //just shows current status so that you know your migrations are in the right spot
-	-if you see **** or something out of place, something is wrong.
-5. bundle exec rake db:seed
-6. run from cloud9 development environment rails s -p $PORT -b $IP
+
+0. clone the rmrly repository from github
+0. `bundle install`
+0. `bundle exec rake db:migrate` (you can use `bundle exec rake db:migrate:status` to see the status of your migrations.
+0. `bundle exec rake db:seed`
+0. run server from cloud9 development environment with `rails s -p $PORT -b $IP`
