@@ -141,12 +141,12 @@ RSpec.describe UsersController, type: :controller do
     end
   end
   
-  describe '#dashboard' do
-       it 'should render the :dashboard template' do
+  describe '#view_matches' do
+       it 'should render the :view_matches template' do
           id = 8
-          FactoryGirl.create(:user, username: "fake_user", id: id, matches: [])
-          get :dashboard, logged_in_user: id
-          expect(response).to render_template("dashboard")
+          FactoryGirl.create(:user, name: "fake_user", id: id, matches: [])
+          get :view_matches, logged_in_user: id
+          expect(response).to render_template("view_matches")
        end
      end
 
