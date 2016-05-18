@@ -25,4 +25,4 @@ If you'd like to begin developing Rmrly, follow these steps:
 
 ## Known Bugs
 
-* `send_survey.feature` outputs an error, but in practice that error does not occur. 
+* `send_survey.feature` outputs an error, but in practice that error does not occur. When a user does not complete the survey, they should stay on the survey page until they complete it, even if they press save. This feature works when actually tested out in practice. However, cucumber seems to believe that after the user presses save, it is routing to their profile page instead of redirecting to the survey page again.
